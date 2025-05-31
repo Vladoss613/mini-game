@@ -10,6 +10,11 @@
 </head>
 <body>
   <canvas id="game" width="400" height="600"></canvas>
+<div id="controls" style="text-align:center; margin-top: 10px;">
+  <button onclick="pressKey('KeyA')" onmouseup="releaseKey('KeyA')" ontouchstart="pressKey('KeyA')" ontouchend="releaseKey('KeyA')">← Влево</button>
+  <button onclick="pressKey('Space')" onmouseup="releaseKey('Space')" ontouchstart="pressKey('Space')" ontouchend="releaseKey('Space')">🔫 Огонь</button>
+  <button onclick="pressKey('KeyD')" onmouseup="releaseKey('KeyD')" ontouchstart="pressKey('KeyD')" ontouchend="releaseKey('KeyD')">→ Вправо</button>
+</div>
   <script src="script.js"></script>
 </body>
 </html>
