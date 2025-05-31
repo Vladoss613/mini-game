@@ -88,8 +88,8 @@ function drawScore() {
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  if (keys["ArrowLeft"] && player.x > 0) player.x -= player.speed;
-  if (keys["ArrowRight"] && player.x < canvas.width - player.width) player.x += player.speed;
+  if (keys["A"] && player.x > 0) player.x -= player.speed;
+  if (keys["D"] && player.x < canvas.width - player.width) player.x += player.speed;
 
   if (keys["Space"]) {
     if (Date.now() - player.lastShot > 300) {
