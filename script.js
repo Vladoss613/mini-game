@@ -17,8 +17,8 @@ let lives = 3;
 let gameOver = false;
 
 const keys = {};
-document.addEventListener("keyW", e => keys[e.code] = true);
-document.addEventListener("keyS", e => keys[e.code] = false);
+document.addEventListener("keydown", e => keys[e.code] = true);
+document.addEventListener("keyup", e => keys[e.code] = false);
 
 function drawPlayer() {
   ctx.fillStyle = "lime";
