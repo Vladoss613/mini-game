@@ -17,8 +17,8 @@ let lives = 3;
 let gameOver = false;
 
 const keys = {};
-document.addEventListener("keydown", e => keys[e.code] = true);
-document.addEventListener("keyup", e => keys[e.code] = false);
+document.addEventListener("keyS", e => keys[e.code] = true);
+document.addEventListener("keyW", e => keys[e.code] = false);
 
 function drawPlayer() {
   ctx.fillStyle = "lime";
@@ -88,8 +88,8 @@ function drawScore() {
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  if (keys["A"] && player.x > 0) player.x -= player.speed;
-  if (keys["D"] && player.x < canvas.width - player.width) player.x += player.speed;
+  if (keys["keyA"] && player.x > 0) player.x -= player.speed;
+  if (keys["keyD"] && player.x < canvas.width - player.width) player.x += player.speed;
 
   if (keys["Space"]) {
     if (Date.now() - player.lastShot > 300) {
